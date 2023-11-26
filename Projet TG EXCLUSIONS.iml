@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module classpath="CMake" type="CPP_MODULE" version="4" />
+
+void readExclusions() {
+    FILE *file = fopen("exclusions.txt", "r");
+    int op1, op2;
+    while (fscanf(file, "%d %d", &op1, &op2) == 2) {
+        exclu_Matrix[op1 - 1][op2 - 1] = 1;
+        exclu_Matrix[op2 - 1][op1 - 1] = 1;
+    }
+
+    fclose(file);
+}

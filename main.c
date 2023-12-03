@@ -86,3 +86,34 @@ struct operation *lire_operations() {
 
     return operations;
 }
+
+
+int main() {
+    // Lire le temps de cycle
+    struct temps_cycle temps_cycle = lire_temps_cycle();
+    printf("les operations sont :\n");
+    // Lire la liste des opérations
+    struct operation *operations = lire_operations();
+
+    // Vérifier si la durée totale des opérations ne dépasse pas le temps de cycle
+    int duree_totale = 0;
+    struct operation *operation = operations;
+    while (operation != NULL) {
+        duree_totale += operation->duree;
+        operation = operation->suivant;
+    }
+    if (duree_totale > temps_cycle.duree) {
+        printf("La duree totale des operations depasse le temps de cycle\n");
+    } else {
+        printf("La duree totale des operations ne depasse pas le temps de cycle\n");
+    }
+
+    // Libérer la mémoire allouée pour la liste des opérations
+    while (operations != NULL) {
+        struct operation *operation_a_liberer = operations;
+        operations = operations->suivant;
+        free(operation_a_liberer);
+    }
+
+    return 0;
+}

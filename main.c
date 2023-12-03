@@ -18,4 +18,14 @@ int main() {
         return 1; // Quitter le programme avec un code d'erreur
     }
 
+    // Lecture du temps de cycle depuis le fichier
+    fscanf(fichier, "%d", &tempsDeCycle);
+
+    // Fermeture du fichier
+    fclose(fichier);
+
+    // Affichage du temps de cycle
+    printf("Le temps de cycle est de %d secondes.\n", tempsDeCycle);
+
+    return 0; // Terminer le programme avec succès
 }

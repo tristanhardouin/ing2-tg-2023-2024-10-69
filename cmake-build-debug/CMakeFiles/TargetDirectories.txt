@@ -1,0 +1,2 @@
+C:/Users/trist_wbwnhau/CLionProjects/ing2-tg-2023-2024-10-69/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/trist_wbwnhau/CLionProjects/ing2-tg-2023-2024-10-69/cmake-build-debug/CMakeFiles/rebuild_cache.dir

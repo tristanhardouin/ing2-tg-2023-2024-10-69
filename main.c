@@ -12,7 +12,7 @@ struct temps_cycle {
     int duree;
 };
 
-// Fonction pour lire le temps de cycle
+// Fonction pour lire le temps de cycle de la ligne de production
 struct temps_cycle lire_temps_cycle() {
     // Ouvrir le fichier en lecture
     FILE *fp = fopen("temps_cycle.txt", "r");

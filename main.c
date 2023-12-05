@@ -109,6 +109,7 @@ int main() {
         printf("La duree totale des operations ne depasse pas le temps de cycle\n");
     }
 
+    
     // Libérer la mémoire allouée pour la liste des opérations
     while (operations != NULL) {
         struct operation *operation_a_liberer = operations;

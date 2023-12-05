@@ -44,7 +44,7 @@ struct operation *lire_operations() {
     // Ouvrir le fichier en lecture
     FILE *fp = fopen("operations.txt", "r");
 
-    // Vérifier si le fichier est ouvert avec succès
+    // Vérifier si le fichier est ouvert 
     if (fp == NULL) {
         perror("Erreur lors de l'ouverture du fichier operations.txt");
         exit(EXIT_FAILURE);

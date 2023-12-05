@@ -162,3 +162,57 @@ int main() {
     return 0;
 } // resultat
 
+
+
+/*#include <stdio.h>
+#include <stdlib.h>
+#include "fcts_contrainte_precedences.h"
+#include "fcts_lecture_fichiers.h"
+
+struct matrice_adjacence* Creer_noeud(int X) {
+    struct matrice_adjacence* noeud = (struct matrice_adjacence*)malloc(sizeof(struct matrice_adjacence));
+    noeud->valeur = X;
+    noeud->suiv = NULL;
+    return noeud;
+}
+
+struct Graphes* Creer_graphe(int nbSommet) {
+    struct Graphes* graph = (struct Graphes*)malloc(sizeof(struct Graphes));
+    graph->nb_sommets = nbSommet;
+    graph->list_adj = (struct matrice_adjacence**)malloc(nbSommet * sizeof(struct matrice_adjacence*));
+    for (int i = 0; i < nbSommet; ++i){
+        graph->list_adj[i] = NULL;
+    }
+    return graph;
+}
+
+
+
+void CreerArrete(struct Graphes* graph, int src, int dest) {
+    struct matrice_adjacence* noeud = Creer_noeud(dest);
+    noeud->suiv = graph->list_adj[src];
+    graph->list_adj[src] = noeud;
+}
+
+struct Graphes* initialiser_Graphe() {
+    FILE *file;
+    file = fopen("../precedences.txt", "r");
+    if (file == NULL) {
+        printf("Erreur ouverture precedences");
+    }
+    int nbArrete = 0;
+    int src, dest;
+    while (fscanf(file, "%d %d", &src, &dest) == 2) {
+        if (src > nbArrete) nbArrete = src;
+        if (dest > nbArrete) nbArrete = dest;
+    }
+    fseek(file, 0, SEEK_SET);
+    struct Graphes *graph = Creer_graphe(nbArrete + 1);
+    while (fscanf(file, "%d %d", &src, &dest) == 2) {
+        CreerArrete(graph, src, dest);
+    }
+    fclose(file);
+    return graph;
+}
+*/
+

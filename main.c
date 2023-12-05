@@ -7,7 +7,7 @@ struct operation {
     struct operation *suivant; // Ajout d'un pointeur vers la prochaine opération
 };
 
-// Définition de la structure temps_cycle
+// Définition de la structure temps_cycle utilisé plus tard pour la fonction de calcul 
 struct temps_cycle {
     int duree;
 };
